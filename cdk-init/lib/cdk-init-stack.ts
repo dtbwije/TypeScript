@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as lambda from 'aws-cdk-lib/aws-lambda'
+import {DatabaseStack} from "./DatabaseStack";
 
 export class CdkInitStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -29,5 +30,6 @@ export class CdkInitStack extends cdk.Stack {
     new cdk.CfnOutput(this, "myFunctionUrlOutput", {
       value: myFunctionUrl.url,
     })
+
   }
 }

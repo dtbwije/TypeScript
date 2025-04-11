@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
+
 import { CdkInitStack } from '../lib/cdk-init-stack';
+import {DatabaseStack} from "../lib/DatabaseStack";
 
 const app = new cdk.App();
 new CdkInitStack(app, 'CdkInitStack', {
@@ -18,3 +20,8 @@ new CdkInitStack(app, 'CdkInitStack', {
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
+
+new DatabaseStack(app, 'DatabaseStack', {
+   env: { account: '912715453939', region: 'eu-central-1' },
+})
+

@@ -20,3 +20,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
   npm run build
 
 ````
+
+
+{                                                                                                                                                                                                                                                                        
+"arn": "arn:aws:codebuild:eu-central-1:912715453939:token/github"
+}
