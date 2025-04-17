@@ -3,6 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 
 import { CdkInitStack } from '../lib/cdk-init-stack';
 import {DatabaseStack} from "../lib/DatabaseStack";
+import {AppStack} from "../lib/AppStack";
 
 const app = new cdk.App();
 new CdkInitStack(app, 'CdkInitStack', {
@@ -22,6 +23,10 @@ new CdkInitStack(app, 'CdkInitStack', {
 });
 
 new DatabaseStack(app, 'DatabaseStack', {
+   env: { account: '912715453939', region: 'eu-central-1' },
+});
+
+new AppStack(app, 'AppStack', {
    env: { account: '912715453939', region: 'eu-central-1' },
 })
 

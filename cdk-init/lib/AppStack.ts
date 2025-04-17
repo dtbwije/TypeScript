@@ -3,6 +3,8 @@ import {Construct} from "constructs";
 import * as ecr from 'aws-cdk-lib/aws-ecr'
 import * as codebuild from "aws-cdk-lib/aws-codebuild"
 import * as lambda from "aws-cdk-lib/aws-lambda"
+import * as iam from "aws-cdk-lib/aws-iam";
+import {SecretValue} from "aws-cdk-lib";
 
 export class AppStack extends cdk.Stack {
     constructor(scope: Construct, id:string, props: cdk.StackProps) {
@@ -12,7 +14,33 @@ export class AppStack extends cdk.Stack {
             imageScanOnPush: true,
         });
 
-        const codeBuild = new codebuild.Project(this, 'MyProject', {
+        const user = new iam.User(this, 'User');
+        ecr.AuthorizationToken.grantRead(user);
+        ecr.
+        //aws codebuild import-source-credentials --profile admin --server-type GITHUB --auth-type PERSONAL_ACCESS_TOKEN --token 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
+
+        // aws-cdk-token
+        //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
+        const gitHubSource = codebuild.Source.gitHub({
+            owner: 'dtbwije',
+            repo: 'TypeScript', // optional, default: undefined if unspecified will create organization webhook
+            webhook: true, // optional, default: true if `webhookFilters` were provided, false otherwise
+            webhookTriggersBatchBuild: true, // optional, default is false
+            webhookFilters: [
+                codebuild.FilterGroup
+                    .inEventOf(codebuild.EventAction.PUSH)
+                    .andBranchIs('main')
+            ], // optional, by default all pushes and Pull Requests will trigger a build
+            reportBuildStatus: true
+        })
+
+        const codeBuild = new codebuild.Project(this, 'TypeScript', {
+            source: gitHubSource,
+            environment: {
+                buildImage: codebuild.LinuxBuildImage.STANDARD_7_0,
+            },
+            //aws secretsmanager put-secret-value  --secret-id github-token --secret-string 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
+
             buildSpec: codebuild.BuildSpec.fromObject({
                 version: '0.2',
                 phases: {
@@ -24,24 +52,6 @@ export class AppStack extends cdk.Stack {
                 },
             }),
         });
-
-        //aws codebuild import-source-credentials --profile admin --server-type GITHUB --auth-type PERSONAL_ACCESS_TOKEN --token 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
-
-        const gitHubSource = codeBuild.Source.gitHub({
-            owner: 'dtbwije',
-            repo: 'TypeScript', // optional, default: undefined if unspecified will create organization webhook
-            webhook: true, // optional, default: true if `webhookFilters` were provided, false otherwise
-            webhookTriggersBatchBuild: true, // optional, default is false
-            webhookFilters: [
-                codebuild.FilterGroup
-                    .inEventOf(codebuild.EventAction.PUSH)
-                    .andBranchIs('main')
-                    .andCommitMessageIs('the commit message'),
-                codebuild.FilterGroup
-                    .inEventOf(codebuild.EventAction.RELEASED)
-                    .andBranchIs('main')
-            ], // optional, by default all pushes and Pull Requests will trigger a build
-        })
 
         const fn = new lambda.Function(this, 'testFunction', {
             runtime: lambda.Runtime.NODEJS_LATEST,
@@ -56,7 +66,7 @@ export class AppStack extends cdk.Stack {
               `),
         });
 
-        const rule = new events.Rule(this, 'rule', {
+        /*const rule = new events.Rule(this, 'rule', {
             eventPattern: {
                 source: ["aws.ec2"],
             },
@@ -68,6 +78,6 @@ export class AppStack extends cdk.Stack {
             retryAttempts: 2, // Optional: set the max number of retry attempts
         }));
         repository.onImageScanCompleted('ImageScanComplete')
-            .target
+            .target*/
     }
 }
