@@ -4,187 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d334184-0c47-4bcd-bd07-edb70e0ded22" name="Changes" comment="codecommit first draft done.">
+    <list default="true" id="d5ea509d-ffe1-4388-903c-1a95a78a5495" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/first-crude-project/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk-init/bin/cdk-init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cdk-init/bin/cdk-init.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk-init/lib/AppStack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cdk-init/lib/AppStack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdk-init/lib/cdk-init-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cdk-init/lib/cdk-init-stack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-crude-project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/first-crude-project/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript File" />
-      </list>
-    </option>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/TypeScriptLearning">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/TypeScriptLearning">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;dtbwije&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/dtbwije/TypeScript&quot;,
-    &quot;accountId&quot;: &quot;4e87eff7-bbd0-41f1-9578-7edb07a80778&quot;
-  }
-}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2sJ0BxC3A3Gknu4o7cpOfBJLszH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2wicOSABXNnMKsMajxhgIdCj6A9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Jest.AppController.root.should return \&quot;Hello World!\&quot;.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.testTypeScript.ts.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dtbwi/WebstormProjects/TypeScript&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;C:/Users/dtbwi/WebstormProjects/TypeScript/first-crude-project/node_modules/jest&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dtbwi/WebstormProjects/TypeScript/src/main.ts&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\dtbwi\\WebstormProjects\\TypeScript\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dtbwi\\WebstormProjects\\TypeScript\\cdk-init\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dtbwi\WebstormProjects\TypeScript" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Jest.AppController.root.should return &quot;Hello World!&quot;">
-    <configuration name="AppController.root.should return &quot;Hello World!&quot;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/first-crude-project/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/first-crude-project" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/first-crude-project/src/app.controller.spec.ts" />
-      <test-names>
-        <test-name value="AppController" />
-        <test-name value="root" />
-        <test-name value="should return &quot;Hello World!&quot;" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="testTypeScript.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="testTypeScript.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Jest.AppController.root.should return &quot;Hello World!&quot;" />
-        <item itemvalue="Node.js.testTypeScript.ts" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4d334184-0c47-4bcd-bd07-edb70e0ded22" name="Changes" comment="" />
-      <created>1738158238413</created>
+      <changelist id="d5ea509d-ffe1-4388-903c-1a95a78a5495" name="Changes" comment="" />
+      <created>1746527804840</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1738158238413</updated>
-      <workItem from="1738158239487" duration="4433000" />
-      <workItem from="1738213143369" duration="1500000" />
-      <workItem from="1738334181729" duration="1920000" />
-      <workItem from="1738336227205" duration="10076000" />
-      <workItem from="1741880258244" duration="734000" />
-      <workItem from="1742340264700" duration="4085000" />
-      <workItem from="1743085236084" duration="104000" />
-      <workItem from="1743164703481" duration="49000" />
-      <workItem from="1743797346311" duration="2792000" />
-      <workItem from="1744261462112" duration="58075000" />
-      <workItem from="1744876719800" duration="820000" />
+      <updated>1746527804840</updated>
     </task>
-    <task id="LOCAL-00001" summary="First Commit">
-      <option name="closed" value="true" />
-      <created>1742373101497</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1742373101497</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Cdk first commit.">
-      <option name="closed" value="true" />
-      <created>1744282482162</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1744282482162</updated>
-    </task>
-    <task id="LOCAL-00003" summary="codecommit first draft done.">
-      <option name="closed" value="true" />
-      <created>1744413294041</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1744413294041</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/cdk-init/bin/cdk-init.js" />
-        <option value="$PROJECT_DIR$/cdk-init/bin/cdk-init.d.ts" />
-        <option value="$PROJECT_DIR$/cdk-init/lib/cdk-init-stack.js" />
-        <option value="$PROJECT_DIR$/cdk-init/lib/cdk-init-stack.d.ts" />
-        <option value="$PROJECT_DIR$/cdk-init/test/cdk-init.test.js" />
-        <option value="$PROJECT_DIR$/cdk-init/test/cdk-init.test.d.ts" />
-      </list>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit" />
-    <MESSAGE value="Cdk first commit." />
-    <MESSAGE value="codecommit first draft done." />
-    <option name="LAST_COMMIT_MESSAGE" value="codecommit first draft done." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/cdk-init/bin/cdk-init.ts</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/cdk-init/lib/cdk-init-stack.ts</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

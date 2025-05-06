@@ -17,10 +17,7 @@ export class AppStack extends cdk.Stack {
         const user = new iam.User(this, 'User');
         ecr.AuthorizationToken.grantRead(user);
         ecr.
-        //aws codebuild import-source-credentials --profile admin --server-type GITHUB --auth-type PERSONAL_ACCESS_TOKEN --token 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
 
-        // aws-cdk-token
-        //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
         const gitHubSource = codebuild.Source.gitHub({
             owner: 'dtbwije',
             repo: 'TypeScript', // optional, default: undefined if unspecified will create organization webhook
@@ -39,7 +36,6 @@ export class AppStack extends cdk.Stack {
             environment: {
                 buildImage: codebuild.LinuxBuildImage.STANDARD_7_0,
             },
-            //aws secretsmanager put-secret-value  --secret-id github-token --secret-string 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
 
             buildSpec: codebuild.BuildSpec.fromObject({
                 version: '0.2',
