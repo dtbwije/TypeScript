@@ -1,7 +1,7 @@
-import { testlib } from './testlib.js';
+import { add } from './testlib';
 
-describe('testlib', () => {
+describe('test testlib', () => {
   it('should work', () => {
-    expect(testlib()).toEqual('testlib');
+    expect(add(3,4)).toEqual(7);
   });
 });
