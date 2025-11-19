@@ -36,8 +36,7 @@ console.log(amount1 , typeof amount1);
 
 let eight: number ;
 
-function  add( num1: number , num2: number ) : number {
-
+export function  add( num1: number , num2: number ) : number {
   return num1 + num2 ;
 }
 
@@ -58,7 +57,7 @@ function greet( name? : string ) : void {
 greet("John");
 greet();
 
-function addTen(a) {
+function addTen(a: number): number {
   return a + 10;
 }
 

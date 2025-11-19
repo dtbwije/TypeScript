@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": [],
-  "include": [],
+  "files": ["./src/tslib/tslib.ts"],
+  "include": ["./src/lib/testlib  .ts"],
   "references": [
     {
       "path": "./tsconfig.lib.json"
