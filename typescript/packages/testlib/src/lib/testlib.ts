@@ -46,7 +46,7 @@ const nine = add(3, 6);
 console.log(nine , typeof nine);
 console.log(eight , typeof eight);
 
-function greet( name? : string ) : void {
+export function greet( name? : string ) : void {
   if( name === undefined ){
     name = "Guest";
   }

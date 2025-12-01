@@ -3,7 +3,7 @@ const dateOfBirthType = new Date(1981,7,24)
 
 console.log(dateOfBirthType);
 
-function getColorName(color:Color) {
+export function getColorName(color:Color) {
     switch (color) {
     case Color.Red:
         console.log("The color is Red");
