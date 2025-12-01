@@ -37,3 +37,9 @@ Run `nx test testlib` to execute the unit tests via [Jest](https://jestjs.io).
 
  * delete files recursively in windows
   `del /s /q *.mjs`
+
+
+ * Node_modules folder is backed up in AppData/Roaming/npm folder. We need to remove that to remove the caches.
+
+  * windows history
+  `doskey /history`
