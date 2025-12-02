@@ -1,10 +1,26 @@
 TypeScript with NX Tutorial
 --
+During th two weeks I figured that it is useless to initiate coding with typescript without learning nx , which is base for the mono repo project. These tools are very fragile and it is easier to get lost in the builds so that actual coding takes lot more time because the build never works and it is very important learn following steps.
+
+1. Setup build environment
+2. Running tests.
+3. Running Code
+    1. For example Java code can be run as applications and as well as classes using static main.
+4. Running all tests
+5. Running single tests
+6. Clean workspace.
+
 
 I installed nx with the following but had to run terminal as administrator.
 
 ```
 choco install nx
+```
+
+I instantiated the project with following command.
+
+```
+npx nx@latest init
 ```
 
 Created the nx project with following command
