@@ -17,29 +17,71 @@ I installed nx with the following but had to run terminal as administrator.
 choco install nx
 ```
 
-I instantiated the project with following command.
+I instantiated the project with following command. This would be the option to use if we are starting with an existing project. But if we do not have a package.json it would be better to have it mannually or use step 1 of NX/NPX section
 
 ```
 npx nx@latest init
 ```
 
-Created the nx project with following command
 
+
+At this point we need to start two separate paths
+1. NX learning path
+2. typescript test project
+3. If possible .github workflow.
+
+So for part one refer to NX/NPX part and typescript/Node/NPM section for the code development
+
+## NX/NPX
+1. Created the nx workspace with following command. Use the --preset  offset to set the repo to typescript. (THIS)[https://nx.dev/docs/technologies/typescript/introduction] is the tutorial for nx infered tasks.
 ```
-npx create-nx-workspace@latest typescript
+ 1. npx create-nx-workspace@latest
+ 2. npx create-nx-workspace my-org --preset=ts
+
+ NX   Let's create a new workspace [https://nx.dev/getting-started/intro]
+
+√ Where would you like to create your workspace? · my-mono-repo
+√ Which stack do you want to use? · node
+√ What framework should be used? · nest
+√ Application name · crud-server
+√ Would you like to generate a Dockerfile? [https://docs.docker.com/] · Yes
+√ Which unit test runner would you like to use? · jest
+√ Would you like to use ESLint? · Yes
+√ Would you like to use Prettier for code formatting? · Yes
+√ Which CI provider would you like to use? · gitlab
+
+ NX   Creating your v22.1.3 workspace.
+
+✔ Installing dependencies with npm
+✔ Successfully created the workspace: my-mono-repo
+✔ Nx Cloud has been set up successfully
+✔ CI workflow has been generated successfully
+
+ NX   Directory is already under version control. Skipping initialization of git.
+
+
+ NX   Your CI setup is almost complete.
+
+Push your repo, then go to Nx Cloud and finish the setup: https://cloud.nx.app/connect/OZxlmXzpVr
 ```
 
+2.Project is configured with jest, nestJS, and docker and end to end testing. So there are following (infered tasks)[https://nx.dev/docs/concepts/inferred-tasks].
+  
 ```
-nx graph
+1. nx build <project name>
+2. nx graph
+
+Running builds on affected projects
+
+1. nx affected:build
+2. nx affected:test
+3. nx affected:lint
 ```
 
-### Running builds on affected projects
 
-```
-nx affected:build
-nx affected:test
-nx affected:lint
-```
+## TypeScript/Node/NPM
+
+
 
 ### Created a submodule
 
@@ -56,9 +98,7 @@ This library was generated with [Nx](https://nx.dev).
 
 `npx nx g @nx/js:lib packages/testlib --bundler=tsc --unitTestRunner=jest --linter=none`
 
-## Building
 
-Run `nx build testlib` to build the library.
 
 ## Running unit tests
 
