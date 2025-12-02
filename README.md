@@ -134,7 +134,18 @@ Run `nx test testlib` to execute the unit tests via [Jest](https://jestjs.io).
   * windows history
   `doskey /history`
 
+  * windows kill a task with PID
+
+  ```
+  taskkill /PID 12345 /F
+  netstat -ano  | findstr :3000
+  ```
+
 
 ### Sources
+1. https://www.typescripttutorial.net/
+2. https://docs.nestjs.com/first-steps
+3. https://nx.dev/docs/features/run-tasks
+
 
 [medium](https://medium.com/@sidharrthnix/nx-monorepo-essentials-a-beginners-guide-to-modern-workspaces-0bcddd8ad7ca)
