@@ -141,6 +141,17 @@ Run `nx test testlib` to execute the unit tests via [Jest](https://jestjs.io).
   netstat -ano  | findstr :3000
   ```
 
+* In order to install python in windows following is the step needed.
+
+```
+C:\Users\dtbwi\WebstormProjects\TypeScript>python
+
+This will open windows package manager and through this it can be installed
+```
+
+## Robot tests
+
+
 
 ### Sources
 1. https://www.typescripttutorial.net/
