@@ -134,6 +134,9 @@ Run `nx test testlib` to execute the unit tests via [Jest](https://jestjs.io).
   * windows history
   `doskey /history`
 
+  *delete folder with its content.
+    rmdir /s vertualEnv
+
   * windows kill a task with PID
 
   ```
@@ -150,6 +153,7 @@ This will open windows package manager and through this it can be installed
 ```
 
 ## Robot tests
+We are using windows. So these instructions are windoes specific. Since we need pip python we will create a virtual envieronment.
 
 
 
