@@ -155,6 +155,13 @@ This will open windows package manager and through this it can be installed
 ## Robot tests
 We are using windows. So these instructions are windoes specific. Since we need pip python we will create a virtual envieronment.
 
+```
+1. Running robot tests
+robot test.robot
+
+
+```
+
 
 
 ### Sources
@@ -164,3 +171,8 @@ We are using windows. So these instructions are windoes specific. Since we need 
 
 
 [medium](https://medium.com/@sidharrthnix/nx-monorepo-essentials-a-beginners-guide-to-modern-workspaces-0bcddd8ad7ca)
+
+
+
+## Trash or not trash
+

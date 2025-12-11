@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-12-12T01:24:16.461209" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\dtbwi\WebstormProjects\TypeScript\robot\test.robot">
+<test id="s1-t1" name="Create A Random String" line="7">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>We are going to generate a random string</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-12T01:24:16.600037" elapsed="0.000344"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<arg>10</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-12-12T01:24:16.600648" elapsed="0.000247"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>We finished generating a random string</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-12T01:24:16.601137" elapsed="0.000212"/>
+</kw>
+<status status="PASS" start="2025-12-12T01:24:16.598787" elapsed="0.002799"/>
+</test>
+<test id="s1-t2" name="Login" line="12">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-12T01:24:16.602511" level="INFO">Creating Session using : alias=mainSession, url=http://localhost:3000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mainSession</arg>
+<arg>http://localhost:3000</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-12T01:24:16.602394" elapsed="0.000291"/>
+</kw>
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2025-12-12T01:24:16.602860" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-12-12T01:24:16.627651" level="INFO">GET Request : url=http://localhost:3000/api/photo-service/login?username=Anil%20expected_status=200 
+ path_url=/api/photo-service/login?username=Anil%20expected_status=200 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-12-12T01:24:16.627753" level="INFO">GET Response : url=http://localhost:3000/api/photo-service/login?username=Anil%20expected_status=200 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '23', 'ETag': 'W/"17-TzGXketnjihp27LBaxXaC/GQ4Cw"', 'Date': 'Thu, 11 Dec 2025 23:24:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"Hello API"} 
+ </msg>
+<msg time="2025-12-12T01:24:16.627857" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mainSession</arg>
+<arg>api/photo-service/login?username=Anil expected_status=200</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2025-12-12T01:24:16.602839" elapsed="0.025042"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-12T01:24:16.628129" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2025-12-12T01:24:16.602069" elapsed="0.026448"/>
+</test>
+<status status="PASS" start="2025-12-12T01:24:16.463025" elapsed="0.167119"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="2" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-12T01:24:16.602860" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+</errors>
+</robot>
