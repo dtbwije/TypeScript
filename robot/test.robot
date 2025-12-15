@@ -10,6 +10,8 @@ Create A Random String
     Log To Console    We finished generating a random string
 
 Login
-    create session  mainSession     http://localhost:3000 
-    ${response}=    get request     mainSession     api/photo-service/login?username=Anil expected_status=200
-    log to console  ${response}
+    create session  mainSession  http://localhost:3000 
+    ${response}=    GET On session     mainSession     url=api/photo-service/login?username=Anil    expected_status=200
+    log to console  LOGIN ${response}
+    Should Be Equal As Strings  ${response.reason}     OK
+   
