@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/crud-server"
+    },
+    {
+      "path": "./frontend-e2e"
+    },
+    {
+      "path": "./frontend"
     }
   ]
 }
