@@ -15,6 +15,8 @@
 
 To run the dev server for your app, use:
 
+This command needs to be run from the server implementation folder only. In the context of this project it is /my-mono-repo/apps
+
 ```sh
 npx nx serve crud-server
 ```

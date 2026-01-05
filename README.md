@@ -116,8 +116,6 @@ Run `nx test testlib` to execute the unit tests via [Jest](https://jestjs.io).
  Then it is possible to run `npm run build`
 
 
-
-
  ## Learnt lessons.
 
  * Powershell is very difficult to work with unless you get the permissions correct. So it would be better to use command prompts/git bash or anything else in windows.
