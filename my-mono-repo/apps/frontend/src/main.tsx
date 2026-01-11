@@ -1,16 +1,19 @@
-import { StrictMode } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import * as ReactDOM from 'react-dom/client';
-import App from './app/app';
+import { createRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+function MyButton() {
+  return (<button>I am button</button>);
+}
 
-root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <MyButton />
+    </div>
+  );
+}
+const container = document.getElementById('root');
+
+if (container) {
+  createRoot(container).render(<MyApp />);
+}
