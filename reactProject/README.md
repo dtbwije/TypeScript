@@ -1,8 +1,11 @@
 # README is this
 
 ## how we get this project up and running
+- create reactProject
+npm create vite@latest projectpilot -- --template react-ts
 
-
+- install css 
+npm install mini.css@3.0.1
 ## React + TypeScript + Vite
 
 
