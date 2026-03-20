@@ -1,0 +1,11 @@
+Mimimal build
+--
+
+1. create index.html
+2. create main.js
+3. npm init --yes
+4. npm install serve
+5. npm install react@18 react-dom@18 --save
+6. npm install --save-dev @babel/standalone //install jsx compiler 
+
+https://handsonreact.com/docs/jsx
