@@ -25,7 +25,7 @@ function Greeter(props: { first: string }) {
   //props.first = "Tharanga";
   return <h1>Hello, {props.first}</h1>;
 }
-function button() {
+function MyButton() {
   return <button onClick={handleClick}> Click me</button>;
 }
 
@@ -41,18 +41,17 @@ class NewGreeter extends React.Component<{ first: string; lastName: string }> {
 
   render() {
     sum(1, 2);
-    withdraw({ total: 100 }, 10);
+    withdraw({ total: 100 }, 10);6
     return <h1>Hello, {this.props.first} {this.props.lastName}</h1>;
   }
 }
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')!).render( 
   <>
-  <button onClick={handleClick}> Click me</button>
+  <MyButton />
   <Greeter first="Tharanga" />
   <NewGreeter first="Anuja" lastName="Wijethilake"/>
   <App />
   <Arrays />
   </>,
-
 )
