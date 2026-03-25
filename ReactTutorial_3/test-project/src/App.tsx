@@ -1,5 +1,5 @@
 import './App.css'
-import Hello, { LatestHellow, NewHello } from './Hello'
+import Hello, { LatestHellow, NewHello } from './components/Hello'
 
 //function App() {
 

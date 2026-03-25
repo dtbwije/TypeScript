@@ -3,7 +3,9 @@ import './index.css'
 import React from 'react';
 import PropTypes from 'prop-types';
 import App from './App';
-import { Arrays } from './Arrays';
+import { Arrays } from './components/Arrays';
+import { FruitList, NewFruitList } from './components/FruitList';
+import NewButton from './components/NewButton';
 
 interface Account {
   total: number;
@@ -45,13 +47,38 @@ class NewGreeter extends React.Component<{ first: string; lastName: string }> {
     return <h1>Hello, {this.props.first} {this.props.lastName}</h1>;
   }
 }
+const data = [
+  { id: 1, name: 'apple' },
+  { id: 2, name: 'orange' },
+  { id: 3, name: 'blueberry' },
+  { id: 4, name: 'banana' },
+  { id: 5, name: 'kiwi' },
+];
 
 createRoot(document.getElementById('root')!).render( 
   <>
-  <MyButton />
+  
   <Greeter first="Tharanga" />
   <NewGreeter first="Anuja" lastName="Wijethilake"/>
   <App />
   <Arrays />
+  //Lets start event handling
+  <MyButton />
+  <table border={1}>
+    <thead>
+      <tr>
+        <th>Fruit List</th>
+        <th>New Fruit List</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><FruitList fruits={data} /></td>
+        <td><NewFruitList fruits={data} /></td>
+      </tr>
+    </tbody>
+  </table>
+  <NewButton />
+  
   </>,
 )
