@@ -16,8 +16,9 @@ class ValidatedForm extends React.Component {
             HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
         >
     ) => {
-        const { name, value, type, checked } = event.target;
-        const newValue = type === 'checkbox' ? checked : value;
+        const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+        const { name, value, type } = target;
+        const newValue = type === 'checkbox' && target instanceof HTMLInputElement ? target.checked : value;
         this.setState({ [name]: newValue });   
     }
 

@@ -1,7 +1,11 @@
 import React from 'react';
 
-class DropDownMenuClass extends React.Component {
-    state = {
+interface DropDownMenuClassState {
+    isOpen: boolean
+}
+
+class DropDownMenuClass extends React.Component<{}, DropDownMenuClassState> {
+    state: DropDownMenuClassState = {
         isOpen: false
     }
 

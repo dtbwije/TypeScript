@@ -4,7 +4,7 @@ function SigninForm() {
     const [userName,setUserName] = useState('');
     const [password,setPassword] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(`Username: ${userName}, Password: ${password}`);
     }

@@ -1,12 +1,12 @@
 import React from 'react';
 
 function UncontrolledForm() {
-    const inputRef = React.useRef(null);
+    const inputRef = React.useRef<HTMLInputElement | null>(null);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log(`Input value: ${inputRef.current}`);
-        console.log(`Input value: ${inputRef.current.value}`);
+        console.log(`Input ref: ${inputRef.current}`);
+        console.log(`Input value: ${inputRef.current?.value}`);
     }
 
     return (
