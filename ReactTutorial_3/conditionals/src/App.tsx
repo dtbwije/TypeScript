@@ -9,6 +9,7 @@ import ExampleForm from './HooksAndForms/Forms'
 import SigninForm from './HooksAndForms/Admin'
 import LoginForm from './HooksAndForms/AdminClass'
 import ValidatedForm from './HooksAndForms/Validation'
+import UncontrolledForm from './HooksAndForms/UncontrolledComponent'
 
 function App() {
   return (
@@ -72,6 +73,10 @@ function App() {
             <tr>
               <td>Form Validation</td>
               <td><ValidatedForm /></td>
+            </tr>
+            <tr>
+              <td> Uncontrolled Component</td>
+              <td> <UncontrolledForm /> </td>
             </tr>
           </tbody>
         </table>
