@@ -13,15 +13,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <azure.functions.maven.plugin.version>1.24.0</azure.functions.maven.plugin.version>
-        <azure.functions.java.library.version>2.2.0</azure.functions.java.library.version>
+        <azure.functions.java.library.version>3.1.0</azure.functions.java.library.version>
         <functionAppName>org.home.test-20260713175759420</functionAppName>
     </properties>
 
-    <dependencies>
+    <dependencyManagement>
         <dependency>
             <groupId>com.microsoft.azure.functions</groupId>
             <artifactId>azure-functions-java-library</artifactId>
             <version>${azure.functions.java.library.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-storage-blob</artifactId>
+            <version>12.35.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity</artifactId>
+            <version>1.18.4</version>
         </dependency>
         <!-- Test -->
         <dependency>
@@ -37,7 +48,7 @@
             <version>2.23.4</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

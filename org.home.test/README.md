@@ -1,6 +1,10 @@
-https://learn.microsoft.com/en-us/azure/azure-functions/how-to-create-function-azure-cli?pivots=programming-language-java&tabs=windows%2Ccmd%2Cazure-cli
+# README
 
-´´´
+
+- [Source 1](https://learn.microsoft.com/en-us/azure/azure-functions/how-to-create-function-azure-cli?pivots=programming-language-java&tabs=windows%2Ccmd%2Cazure-cli)
+- [Source 2](https://microsoftlearning.github.io/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage/Instructions/Labs/LAB_02b_storage_private_docs.html)
+
+```
 az group create --name "AzureFunctionsQuickstart-rg" --location "Sweden Central"
 
 {
@@ -15,6 +19,9 @@ az group create --name "AzureFunctionsQuickstart-rg" --location "Sweden Central"
   "type": "Microsoft.Resources/resourceGroups"
 }
 
+```
+
+```
 az storage account create --name storage4test4tharanga --location "Sweden Central" --resource-group "AzureFunctionsQuickstart-rg" --sku "Standard_LRS" --allow-blob-public-access false --allow-shared-key-access false
 
 {
@@ -119,13 +126,14 @@ az storage account create --name storage4test4tharanga --location "Sweden Centra
   "type": "Microsoft.Storage/storageAccounts",
   "zones": null
 }
-´´´
+```
 
 
 managed_identity.bat "Sweden Central" storage4test4tharanga
 
 sh identity.sh "Sweden Central" storage4test4tharanga
-´´´
+
+```
 managed_identity.bat "Sweden Central" storage4test4tharanga
 Creating managed identity "func-host-storage-user" in resource group "AzureFunctionsQuickstart-rg"...
 Getting storage account resource ID for "storage4test4tharanga"...
@@ -149,12 +157,14 @@ Assigning Storage Blob Data Owner role to the managed identity...
   "updatedBy": "1fba70cb-0f57-4aca-b38b-6cef8c8c58ad",
   "updatedOn": "2026-07-13T16:31:46.361700+00:00"
 }
-´´´
+```
+
+```
 az functionapp create --resource-group "AzureFunctionsQuickstart-rg" --name <APP_NAME> --flexconsumption-location <REGION> --runtime java --runtime-version <LANGUAGE_VERSION> --storage-account <STORAGE_NAME> --deployment-storage-auth-type UserAssignedIdentity --deployment-storage-auth-value "func-host-storage-user"
 
 az functionapp create --resource-group "AzureFunctionsQuickstart-rg" --name tharangafirstapp --flexconsumption-location "Sweden Central" --runtime java --runtime-version 17 --storage-account storage4test4tharanga --deployment-storage-auth-type UserAssignedIdentity --deployment-storage-auth-value "func-host-storage-user"
 
-~~~
+
 {
   "id": "/subscriptions/1f681932-af34-40e4-be5a-858701c64d48/resourceGroups/AzureFunctionsQuickstart-rg/providers/Microsoft.Web/sites/tharangafirstapp",
   "identity": {
@@ -451,8 +461,13 @@ az functionapp create --resource-group "AzureFunctionsQuickstart-rg" --name thar
   "resourceGroup": "AzureFunctionsQuickstart-rg",
   "type": "Microsoft.Web/sites"
 }
-~~~
+```
 
-appInsights=$(az monitor app-insights component show --resource-group "AzureFunctionsQuickstart-rg" --app <APP_NAME> --query "id" --output tsv)
+
+```
+appInsights=$(az monitor app-insights component show --resource-group "AzureFunctionsQuickstart-rg" --app tharangafirstapp --query "id" --output tsv)
 principalId=$(az identity show --name "func-host-storage-user" --resource-group "AzureFunctionsQuickstart-rg" --query principalId -o tsv)
 az role assignment create --role "Monitoring Metrics Publisher" --assignee $principalId --scope $appInsights
+```
+
+az monitor app-insights component list --resource-group "AzureFunctionsQuickstart-rg" --query "[].{name:name,id:id}" --output table
