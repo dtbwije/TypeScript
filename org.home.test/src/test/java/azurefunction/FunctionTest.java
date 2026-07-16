@@ -1,8 +1,13 @@
 package azurefunction;
 
-import com.microsoft.azure.functions.*;
+
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+
+import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.HttpResponseMessage;
+import com.microsoft.azure.functions.HttpStatus;
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -44,8 +49,9 @@ public class FunctionTest {
         final ExecutionContext context = mock(ExecutionContext.class);
         doReturn(Logger.getGlobal()).when(context).getLogger();
 
+
         // Invoke
-        final HttpResponseMessage ret = new Function().run(req, context);
+        final HttpResponseMessage ret = new Function().firstExample(req, context);
 
         // Verify
         assertEquals(ret.getStatus(), HttpStatus.OK);

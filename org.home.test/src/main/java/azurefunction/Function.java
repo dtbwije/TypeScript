@@ -1,7 +1,10 @@
 package azurefunction;
 
+import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.storage.blob.BlobContainerClient;
 import com.azure.storage.blob.BlobContainerClientBuilder;
+import com.azure.storage.blob.BlobServiceClient;
+import com.azure.storage.blob.BlobServiceClientBuilder;
 import com.azure.storage.blob.models.BlobItem;
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
@@ -12,19 +15,13 @@ import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 /**
  * Azure Functions with HTTP Trigger.
  */
 public class Function {
-    /**
-     * This function listens at endpoint "/api/HttpExample". Two ways to invoke it using "curl" command in bash:
-     * 1. curl -d "HTTP Body" {your host}/api/HttpExample
-     * 2. curl "{your host}/api/HttpExample?name=HTTP%20Query"
-     */
+
     @FunctionName("HttpExample")
     public HttpResponseMessage firstExample(
             @HttpTrigger(
@@ -57,34 +54,39 @@ public class Function {
             final ExecutionContext context) {
 
         try {
+        
+            BlobServiceClient blobServiceClient =
+                new BlobServiceClientBuilder()
+                    .endpoint("https://storage4test4tharanga.blob.core.windows.net")
+                    .credential(new DefaultAzureCredentialBuilder().build())
+                    .buildClient();
 
-            String containerName =
-                    request.getQueryParameters().get("mauucontainer");
 
-            if (containerName == null || containerName.isEmpty()) {
-                return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
-                        .body("Please provide a container parameter.")
-                        .build();
-            }
+            
+            StringBuilder response = new StringBuilder();
 
-            String connectionString =
-                    System.getenv("AzureWebJobsStorage");
+            blobServiceClient.listBlobContainers().forEach(container -> {
+                System.out.println("Blob: " + container.getName());
+                response.append("Container: ")
+                        .append(container.getName())
+                        .append("\n");
+                
+                BlobContainerClient containerClient =
+                    blobServiceClient.getBlobContainerClient(container.getName());
 
-            BlobContainerClient containerClient =
-                    new BlobContainerClientBuilder()
-                            .connectionString(connectionString)
-                            .containerName(containerName)
-                            .buildClient();
+                // List all blobs in the container
+                for (BlobItem blob : containerClient.listBlobs()) {
+                    System.out.println("Blob: " + blob.getName() + " Size: " + blob.getProperties().getContentLength());
 
-            List<String> blobs = new ArrayList<>();
-
-            for (BlobItem blobItem : containerClient.listBlobs()) {
-                blobs.add(blobItem.getName());
-            }
+                    response.append("    ").append(
+                        "  Blob: " + blob.getName() +
+                        " Size: " + blob.getProperties().getContentLength()
+                    );
+                }
+            });
 
             return request.createResponseBuilder(HttpStatus.OK)
-                    .header("Content-Type", "application/json")
-                    .body(blobs)
+                    .body(response.toString())
                     .build();
 
         } catch (Exception e) {
