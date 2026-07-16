@@ -1,8 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "FUNCTIONS_WORKER_RUNTIME": "java",
-     "STORAGE_CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=storage4test4tharanga;AccountKey=lzfyHReOGC8BX+fwL8SA0AFt+hBA014WLz+BZ5e8NSWuTCsN64upG5R5H6e+hcNC5V+FUpBsYhbS+AStwwEkbw==;EndpointSuffix=core.windows.net"
-  }
-}
