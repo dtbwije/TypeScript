@@ -27,6 +27,7 @@ public class Function {
             @HttpTrigger(
                 name = "req",
                 methods = {HttpMethod.GET, HttpMethod.POST},
+                route = "httpexample",
                 authLevel = AuthorizationLevel.ANONYMOUS)
                 HttpRequestMessage<Optional<String>> request,
             final ExecutionContext context) {
@@ -49,6 +50,7 @@ public class Function {
             @HttpTrigger(
                     name = "req",
                     methods = {HttpMethod.GET},
+                    route = "listblobs",
                     authLevel = AuthorizationLevel.FUNCTION)
             HttpRequestMessage<Optional<String>> request,
             final ExecutionContext context) {
